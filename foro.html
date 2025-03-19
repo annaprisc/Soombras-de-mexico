@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro - Sombras de México</title>
+    <link rel="stylesheet" href="css/foro.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="leyendas.html">Leyendas</a></li>
+                <li><a href="mitos.html">Mitos</a></li>
+                <li><a href="foro.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="foro-container">
+        <h1>Foro de Testimonios</h1>
+        <p>Comparte tu experiencia con lo paranormal en México.</p>
+
+        <!-- Formulario para escribir un testimonio -->
+        <div class="formulario-foro">
+            <input type="text" id="nombre" placeholder="Tu nombre">
+            <textarea id="mensaje" placeholder="Escribe tu testimonio aquí..."></textarea>
+            <button onclick="enviarMensaje()">Enviar</button>
+        </div>
+
+        <!-- Aquí se mostrarán los testimonios con scroll -->
+        <div id="testimonios-container" class="mensajes">
+            <h2>Testimonios Recientes</h2>
+            <ul id="lista-testimonios"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Sombras de México - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <audio id="audioFondo" autoplay loop>
+        <source src="assets/audio/audio-de-fondo.mp3" type="audio/mp3">
+    </audio>
+
+</body>
+</html>
