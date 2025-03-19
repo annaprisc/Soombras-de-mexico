@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap'); 
+
+body {
+    font-family: 'Old Standard TT', serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del menú */
+nav {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgba(20, 20, 20, 0.9);
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+}
+
+.submenu li {
+    display: block;
+    margin: 5px 0;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    display: block;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-bottom: 50px;
+}
+
+h1 {
+    color: orange;
+}
+
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrusel-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.carrusel {
+    display: flex;
+    width: 400%;
+    animation: slide 10s infinite linear;
+}
+
+.carrusel-item {
+    flex: 0 0 25%;
+    text-align: center;
+}
+
+.carrusel img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.descripcion {
+    margin-top: 10px;
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0%); }
+}

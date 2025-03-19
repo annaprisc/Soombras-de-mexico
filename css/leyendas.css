@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+
+body {
+    font-family: 'Old Standard TT', serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del menú */
+nav {
+    background: rgba(102, 100, 100, 0.76);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgba(20, 20, 20, 0.9);
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+}
+
+.submenu li {
+    display: block;
+    margin: 5px 0;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff4500;
+    font-size: 36px;
+}
+
+/* Sección de leyendas */
+.leyenda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8),
+                0 0 20px rgba(255, 69, 0, 0.5),
+                0 0 30px rgba(255, 69, 0, 0.3);
+    max-width: 900px;
+    width: 90%;
+    min-height: 350px;
+    box-sizing: border-box;
+}
+
+/* Alternar posición de las leyendas */
+.leyenda:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Contenedor de texto */
+.leyenda-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.leyenda h2 {
+    font-size: 26px;
+    color: #ff4500;
+    text-align: center;
+}
+
+.leyenda p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Contenedor de mapa o imagen */
+.leyenda-mapa, .leyenda-imagen {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leyenda-mapa iframe, .leyenda-imagen img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .leyenda {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leyenda:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+
+
+             

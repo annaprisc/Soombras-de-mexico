@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+.logo {
+    height:60px; /* Ajusta el tamaño según lo necesites */
+    margin-right: 1200px;
+}
+/* Asegura que el HTML y el body ocupen toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del video */
+.video-container {
+    position: fixed; /* Fijado para que siempre esté en el fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Asegura que el contenido esté encima del video */
+}
+
+/* Ajuste del video para que cubra toda la pantalla */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video sin distorsión */
+    pointer-events: none; /* Evita interacción accidental con el video */
+}
+
+/* Sección principal */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Asegura que siempre ocupe toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+/* Contenido encima del video */
+.hero-content {
+    position: absolute;  /* Asegura que se posicione sobre el video */
+    top: 50%;
+    left: 5%; /* Ajusta para alinearlo a la izquierda */
+    transform: translateY(-50%); /* Centrado vertical */
+    z-index: 2; /* Asegura que esté sobre el video */
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para resaltar el texto */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 10px;
+}
+
+.hero-background {
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Se ajusta al tamaño del contenido */
+    text-align: left; /* Asegura que el texto quede alineado a la izquierda */
+}
+.hero-content {
+    background: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mantiene el texto alineado a la izquierda */
+    padding-left: 5%;
+    height: 100vh;
+}
+
+/* Estilos del título y subtítulo */
+.titulo-principal {
+    font-size: 4em;
+    color: #ff4500;
+    margin: 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Agrega sombra negra al texto */
+}
+
+.subtitulo {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+}
+
+
+
+/* Estilos del menú */
+nav {
+    background: rgba(250, 244, 244, 0.315);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgba(20, 20, 20, 0.9);
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+}
+
+.submenu li {
+    display: block;
+    margin: 5px 0;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    display: block;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Foro */
+.foro-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 140, 0, 0.8);
+}
+
+.formulario-foro {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    color: white;
+    border: 1px solid #ff4500;
+    border-radius: 5px;
+}
+
+ 
+#testimonios-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#lista-testimonios {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-testimonios li {
+    background: #222;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-left: 3px solid #ff4500;
+}
+
+
+/* Contenedor del video de fondo */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
